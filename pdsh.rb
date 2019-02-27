@@ -18,13 +18,15 @@ class Pdsh < Formula
     args = %W[
       --prefix=#{prefix}
       --mandir=#{man}
-      --with-nodeupdown
+      --without-nodeupdown
       --with-readline
       --with-ssh
       --without-dshgroups
       --without-rsh
       --without-xcpu
       --with-genders
+      --enable-static-modules
+      --enable-static
     ]
 
     system "./configure", *args
